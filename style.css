@@ -1,0 +1,169 @@
+:root {
+  --cor-principal: #c2410c;
+  --cor-fundo: #fff7ed;
+  --cor-cartao: #ffffff;
+  --cor-texto: #1f2937;
+  --cor-suave: #6b7280;
+  --raio: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.5;
+}
+
+.topo {
+  background: var(--cor-principal);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.topo h1 {
+  font-size: 2rem;
+}
+
+.conteudo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 8rem;
+}
+
+.controles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+#busca {
+  padding: 0.75rem 1rem;
+  border: 1px solid #fdba74;
+  border-radius: var(--raio);
+  font-size: 1rem;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filtros button {
+  border: 1px solid var(--cor-principal);
+  background: transparent;
+  color: var(--cor-principal);
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.filtros button.ativo {
+  background: var(--cor-principal);
+  color: #fff;
+}
+
+.cardapio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.prato {
+  background: var(--cor-cartao);
+  border-radius: var(--raio);
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prato p {
+  color: var(--cor-suave);
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.prato .rodape-prato {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prato button,
+#limpar {
+  background: var(--cor-principal);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+}
+
+.vazio {
+  color: var(--cor-suave);
+}
+
+.pedido {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 2px solid var(--cor-principal);
+  padding: 0.75rem 1rem;
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.pedido h2 {
+  font-size: 1.1rem;
+}
+
+.pedido ul {
+  list-style: none;
+  margin: 0.5rem 0;
+}
+
+.pedido li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.total {
+  margin-bottom: 0.5rem;
+}
+
+.rodape {
+  text-align: center;
+  color: var(--cor-suave);
+  font-size: 0.85rem;
+  padding: 1rem 1rem 10rem;
+}
+
+@media (min-width: 1100px) {
+  .pedido {
+    top: 7rem;
+    left: auto;
+    right: 1rem;
+    bottom: auto;
+    width: 260px;
+    border: 2px solid var(--cor-principal);
+    border-radius: var(--raio);
+    max-height: none;
+  }
+
+  .rodape {
+    padding-bottom: 1rem;
+  }
+}
