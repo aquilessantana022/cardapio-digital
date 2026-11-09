@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor da Bahia | Cardápio Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>Sabor da Bahia</h1>
+    <p>Cozinha baiana feita com carinho</p>
+  </header>
+
+  <main class="conteudo">
+    <section class="controles">
+      <input type="search" id="busca" placeholder="Buscar prato..." aria-label="Buscar prato">
+      <div class="filtros" id="filtros"></div>
+    </section>
+
+    <section class="cardapio" id="cardapio" aria-live="polite"></section>
+  </main>
+
+  <aside class="pedido" id="pedido">
+    <h2>Seu pedido</h2>
+    <ul id="itens-pedido"></ul>
+    <p class="total">Total: <strong id="total">R$ 0,00</strong></p>
+    <button id="limpar" type="button">Limpar pedido</button>
+  </aside>
+
+  <footer class="rodape">
+    <p>Projeto de estudo de Aquiles Santana · restaurante fictício</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
